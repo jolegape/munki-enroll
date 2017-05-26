@@ -1,7 +1,7 @@
 #!/bin/sh 
  
 HOSTN=$( scutil --get LocalHostName );
-SUBMITURL="http://munki.stmonicas.qld.edu.au/munki-enroll/enroll.php"
+SUBMITURL="http://smcxs001.cairns.catholic.edu.au/munki/munki-enroll/enroll.php"
 COMPFIELD1=`defaults read /Library/Preferences/com.apple.RemoteDesktop Text1`
 
 
@@ -17,7 +17,7 @@ echo "Compfield1: $COMPFIELD1"
 echo "Identifer1 is $IDENTIFIER1"
 
 # Set the munki config
-defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "http://munki.stmonicas.qld.edu.au/"
+defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "http://smcxs001.cairns.catholic.edu.au/munki"
 defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "$HOSTN"
 
 # Application paths
